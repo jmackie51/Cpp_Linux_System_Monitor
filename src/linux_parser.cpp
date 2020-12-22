@@ -131,10 +131,6 @@ long LinuxParser::Jiffies() {
   return tot; 
 }
 
-// TODO: Read and return the number of active jiffies for a PID
-// REMOVE: [[maybe_unused]] once you define the function
-long LinuxParser::ActiveJiffies(int pid[[maybe_unused]]) { return 0; }
-
 // Read and return the number of active jiffies for the system
 long LinuxParser::ActiveJiffies() { 
   
@@ -175,7 +171,6 @@ vector<string> LinuxParser::CpuUtilization() {
 int LinuxParser::TotalProcesses() { 
   string line, key, value;
   int numProcesses;
-  int runningProcesses;
   string line_vals;
   vector<string> line_Vector;
   std::ifstream stream(kProcDirectory + kStatFilename);
@@ -223,7 +218,7 @@ int LinuxParser::RunningProcesses() {
  
 }
 
-// TODO: Read and return the command associated with a process
+// Read and return the command associated with a process
 string LinuxParser::Command(int pid) { 
   string cmdLine; 
   string line;
@@ -300,7 +295,6 @@ string LinuxParser::User(int pid) {
     } 
   } 
   return userName; 
-  
   }
 
 // Read and return the required metrics from the linux folder system needed to calculate process CPU usage

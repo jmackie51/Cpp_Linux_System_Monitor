@@ -34,19 +34,17 @@ processor.h
 system.h
 ../include/system.h
 
-/home/workspace/CppND-System-Monitor/src/process.cpp
+/home/workspace/CppND-System-Monitor/src/linux_parser.cpp
+dirent.h
+-
 unistd.h
--
-cctype
--
-sstream
 -
 string
 -
 vector
 -
-process.h
-/home/workspace/CppND-System-Monitor/src/process.h
 linux_parser.h
 /home/workspace/CppND-System-Monitor/src/linux_parser.h
+system.h
+/home/workspace/CppND-System-Monitor/src/system.h
 
